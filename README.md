@@ -1,5 +1,7 @@
 # Lambda Treasure Hunt Server
 
+Student facing test server for Lambda Treasure Hunt.
+
 
 ## 1. Deploy server
 * `git clone https://github.com/br80/Lambda-Treasure-Hunt--Server/`
