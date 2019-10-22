@@ -7,6 +7,7 @@ Student facing test server for Lambda Treasure Hunt.
 * `git clone https://github.com/br80/Lambda-Treasure-Hunt--Server/`
 * `pipenv install`
 * `pipenv shell`
+* `./manage.py makemigrations`
 * `./manage.py migrate`
 * `./manage.py runserver`
 
