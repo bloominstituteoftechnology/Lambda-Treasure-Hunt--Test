@@ -2,18 +2,37 @@
 
 Student facing test server for Lambda Treasure Hunt.
 
+## Requirements:
+
+- Python3.7
+- pipenv `pip install pipenv`
+- Running Postgres Database
+- Pusher.com account and app settings
 
 ## 1. Deploy server
 * `git clone https://github.com/br80/Lambda-Treasure-Hunt--Server/`
 * `pipenv install`
 * `pipenv shell`
+* Create a database in Postgres
+* Create a file called `settings.ini` in the root of this project with the following settings:
+
+```ini
+SECRET_KEY=XXXX
+DEBUG=True
+ALLOWED_HOSTS=['localhost']
+DATABASE_URL=postgres://username:password@localhost/DATABASE_NAME
+PUSHER_APP_ID=xxxx
+PUSHER_KEY=xxxx
+PUSHER_SECRET=xxxx
+PUSHER_CLUSTER=us2
+```
+
 * `./manage.py makemigrations`
 * `./manage.py migrate`
 * `./manage.py runserver`
 
 ## 2. Migrate world
-* `./manage.py shell`
-* copy/paste `util/create_world.py` into Python shell
+* `./manage.py shell > util/create_world.p`
 
 ## 3. Create a user
 * `curl -X POST -H "Content-Type: application/json" -d '{"username":"testuser", "password1":"testpassword", "password2":"testpassword"}' localhost:8000/api/registration/`
